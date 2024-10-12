@@ -1,12 +1,11 @@
 use std::convert::TryFrom;
 use super::method::Method;
 use std::str::FromStr;
-
 #[derive(Debug)]
 pub struct Request {
     pub path: String,
     pub query_string: Option<String>,
-    pub method: Method,
+    pub method:Method,
 }
 
 impl TryFrom<&[u8]> for Request {
