@@ -1,0 +1,59 @@
+[33mcommit 2f39ea310798f6df9d2b68781655f525731d2db7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Euclideus <143367005+Euclidae@users.noreply.github.com>
+Date:   Sat Oct 12 22:37:22 2024 +0200
+
+    Fixed the server by means of ading #[derive(Debug)] above the Request struct. In server.rs added use request::Request
+
+[33mcommit b53bc85f45f5446a782147312c4f9f2f3826eeda[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Euclideus <143367005+Euclidae@users.noreply.github.com>
+Date:   Sat Oct 12 14:19:35 2024 +0200
+
+    Update README.md
+
+[33mcommit 4e96dcdb619e881310d37e97e6291a300d6936f0[m
+Author: Euclideus <143367005+Euclidae@users.noreply.github.com>
+Date:   Sat Oct 12 14:16:11 2024 +0200
+
+    Solved a few issues in request.rs
+    
+    Removed the Encrypt trait and its implementations as they were not used and not implemented. Will add them when I fully realize what's going on.
+    Implemented the TryFrom trait for Request to parse the HTTP request.
+    Added a FromStr implementation for Method to parse the method string.
+    Added a helper function get_next_word to assist in parsing the request.
+    Made Request derive Debug for easier printing.
+
+[33mcommit 411661aaf4d2db4941e4cb4bbf1b5753db62c44c[m
+Author: Euclideus <143367005+Euclidae@users.noreply.github.com>
+Date:   Sat Oct 12 14:14:51 2024 +0200
+
+    Adjusted issues in server.rs
+    
+    Minor typo: In the line printing the received request, there was a typo in the word "request" (it was spelled "reuqest").
+    Unused import: The TcpStream import was not being used and could be removed.
+    Unused imports from the convert module: TryFrom and TryInto were imported but not used directly in this file.
+    Incomplete error handling: The Ok(request) arm of the match statement for parsing the request was empty, missing an opportunity to handle or log the successfully parsed request.
+    Unclear error message: The error message for failing to read from the stream said "Failed to establish a connection", which is not accurate as the connection was already established at that point.
+
+[33mcommit 8737fe27cb20fbea5670742000265b6165dca656[m
+Author: Euclideus <143367005+Euclidae@users.noreply.github.com>
+Date:   Sat Oct 12 14:10:33 2024 +0200
+
+    Main
+
+[33mcommit a739b9a7c29f806ef2f286ac94a83644c411cac5[m
+Author: TypicRavager <143367005+TypicRavager@users.noreply.github.com>
+Date:   Sun Aug 18 12:09:44 2024 +0200
+
+    added some unimplemented functions. Will sort out soon
+
+[33mcommit bdf612399812bc41b66a49f90de3e7e72b6936e6[m
+Author: TypicRavager <143367005+TypicRavager@users.noreply.github.com>
+Date:   Sun Aug 18 08:06:52 2024 +0200
+
+    Can now listen
+
+[33mcommit 786cb6ac2b614c971b52c81239b8360d135dc7b2[m
+Author: TypicRavager <143367005+TypicRavager@users.noreply.github.com>
+Date:   Sun Aug 18 07:31:45 2024 +0200
+
+    first attempt tcp server
