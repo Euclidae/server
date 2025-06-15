@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust HTTP Server - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦀 Rust HTTP Server</h1>
+            <nav>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="hello.html" class="nav-link">Hello</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="hero">
+                <h2>Welcome to the Rust HTTP Server!</h2>
+                <p>This is a complete HTTP server implementation built with Rust, featuring:</p>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <h3>🚀 Fast & Safe</h3>
+                        <p>Built with Rust's memory safety and performance in mind</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🔒 Secure</h3>
+                        <p>Directory traversal attack prevention built-in</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>📁 Static Files</h3>
+                        <p>Serves HTML, CSS, JS, and other static content</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🔧 Modular</h3>
+                        <p>Clean architecture with trait-based design</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="info">
+                <h3>Server Information</h3>
+                <ul>
+                    <li><strong>Address:</strong> 127.0.0.1:8080</li>
+                    <li><strong>Methods:</strong> GET, POST</li>
+                    <li><strong>Status:</strong> <span class="status-active">Active</span></li>
+                </ul>
+            </section>
+            
+            <section class="test-section">
+                <h3>Test the Server</h3>
+                <p>Try these curl commands to test different endpoints:</p>
+                <div class="code-block">
+                    <code>curl http://127.0.0.1:8080</code><br>
+                    <code>curl http://127.0.0.1:8080/hello</code><br>
+                    <code>curl -X POST http://127.0.0.1:8080 -d "test data"</code>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Rust HTTP Server Project</p>
+        </footer>
+    </div>
+</body>
+</html>
